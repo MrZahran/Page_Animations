@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Caveat, serif;
+}
+
+header nav {
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  min-height: 10vh;
+  align-items: center;
+  color: white;
+}
+
+#logo {
+  grid-column: 2/3;
+  font-size: 35px;
+}
+
+header nav img {
+  width: 30px;
+  color: white;
+  justify-self: end;
+}
+
+section {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+section .hero {
+  height: 60%;
+  width: 100%;
+  position: relative;
+}
+
+section .hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+}
+
+section .hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section .hero h1 {
+  color: white;
+}
+
+.headline {
+  position: absolute;
+  left: 2%;
+  bottom: 4%;
+  font-size: 41px;
+  z-index: 3;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to left, rgb(2, 87, 109), rgb(26, 117, 139));
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
